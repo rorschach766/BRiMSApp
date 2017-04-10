@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MSApp.Pages.QuestionnairePg4" Title="Question 4">
+    <Grid>
+        <Image Source="bckgrd.jpg" Aspect="AspectFill"/>
+        <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="#ffffff" Opacity="0.7">
+            <Label Margin="5,5,20,10" TextColor="#000000" FontSize="Medium" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Did you lay on the ground or floor for more than 10 minutes "/>
+                        <Span FontSize="Medium" FontAttributes="Bold" Text="because of any falls?"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Switch x:Name="switch1" HorizontalOptions="Center" IsToggled="False"/>
+            <Label x:Name="response" FontSize="Large" TextColor="#000000" VerticalTextAlignment="Center" HorizontalOptions="Center" Text="No"/>
+            <Grid x:Name="grid1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75*"/>
+                    <ColumnDefinition Width="25*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>
+                </Grid.RowDefinitions>
+                
+                <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#000000" VerticalOptions="End" HeightRequest="1"/>
+                <BoxView Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" BackgroundColor="#000000" HorizontalOptions="End" WidthRequest="1"/>
+
+                <Label Text="Time on the ground or floor" FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+                <Label Text="Number of times" FontSize="Small" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+
+                <Label Text="10 ~ 30 minutes" FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+                <Label Text="30 ~ 60 minutes" FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="2"/>
+                <Label Text="More than 60 minutes" FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="3"/>
+
+                <Picker x:Name="tenThirty" Grid.Column="1" Grid.Row="1" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Picker x:Name="thirtySixty" Grid.Column="1" Grid.Row="2" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Picker x:Name="sixtyPlus" Grid.Column="1" Grid.Row="3" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+            <Button x:Name="btnContinue" Text="Confirm" TextColor="#000000" FontSize="Medium" Margin="50,10,50,20" Clicked="progressToPage5"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

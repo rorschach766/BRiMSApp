@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MSApp.Pages.QuestionnairePg1" Title="Question 1">
+    <Grid>
+        <Image Source="bckgrd.jpg" Aspect="AspectFill"/>
+        <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="#ffffff" Opacity="0.7">
+            <Label Margin="5,5,20,10" TextColor="#000000" FontSize="Medium" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Did you have any falls in the 2 week period?"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Switch x:Name="switch1" HorizontalOptions="Center" IsToggled="False"/>
+            <Label x:Name="anyFallsDisplay" FontSize="Large" TextColor="#000000" VerticalTextAlignment="Center" HorizontalOptions="Center" Text="No"/>
+            <Button x:Name="btnContinue" Text="Confirm" TextColor="#000000" FontSize="Medium" Margin="50,10,50,20" Clicked="progressToPage2"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

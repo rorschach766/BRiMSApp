@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MSApp.Pages.DiaryPage" Title="Diary">
+    <Grid>
+        <Image Source="bckgrd.jpg" Aspect="AspectFill"/>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="0,10,0,0">
+            <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="#ffffff" Opacity="0.7" Padding="0,0,0,5">
+                <Label Margin="5,5,0,10" TextColor="#000000" FontSize="Medium" HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="For each day please enter the number of falls* you have (if any) and how many that caused an injury. If you don't have a fall just enter 0."/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Grid Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="50*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Day: " FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0"/>
+                    <Label x:Name="daysDisplay" FontSize="Large" TextColor="#000000" VerticalTextAlignment="Center" HorizontalOptions="Center" Grid.Column="1"></Label>
+                    <Stepper x:Name="Stepper3" HorizontalOptions="Center" Minimum="1" Maximum="14" Increment="1" ValueChanged="NumDaysChanged" Grid.Column="2"/>
+                </Grid>
+                <Grid Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="50*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="No. of Falls: " FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0"/>
+                    <Label x:Name="fallsDisplay" FontSize="Large" TextColor="#000000" VerticalTextAlignment="Center" HorizontalOptions="Center" Grid.Column="1"></Label>
+                    <Stepper x:Name="Stepper1" HorizontalOptions="Center" Minimum="0" Maximum="25" Increment="1" ValueChanged="NumFallsChanged" Grid.Column="2"/>
+                </Grid>
+                <Grid Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="50*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Falls causing injury : " FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0"/>
+                    <Label x:Name="displayInjury" FontSize="Large" TextColor="#000000" VerticalTextAlignment="Center" HorizontalOptions="Center" Grid.Column="1"/>
+                    <Stepper x:Name="Stepper2" HorizontalOptions="Center" Minimum="0" Maximum="25" ValueChanged="NumInjuryChanged" Grid.Column="2"/>
+                </Grid>
+                <Button x:Name="btnSignUp" Text="Confirm Entry" TextColor="#000000" FontSize="Medium" Margin="50,10,50,20"/>
+                <Label Margin="5,5,0,5" TextColor="#000000" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="*Please consider a fall as &quot;an unexpected event in which you come to rest on the ground floor, or lower level&quot;"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

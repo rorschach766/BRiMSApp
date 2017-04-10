@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MSApp.Pages.QuestionnairePg2" Title="Question 2">
+    <Grid>
+        <Image Source="bckgrd.jpg" Aspect="AspectFill"/>
+        <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="#ffffff" Opacity="0.7">
+            <Label Margin="5,5,5,5" TextColor="#000000" FontSize="Medium" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Did you experiance any injuries due to a fall? If yes please give the number of each "/>
+                        <Span FontSize="Medium" FontAttributes="Bold" Text="type "/>
+                        <Span Text="of injury due to a fall."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Switch x:Name="switch1" HorizontalOptions="Center" IsToggled="False"/>
+            <Label x:Name="response" FontSize="Large" TextColor="#000000" VerticalTextAlignment="Center" HorizontalOptions="Center" Text="No"/>
+            <Grid x:Name="grid1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="16*"/>
+                    <RowDefinition Height="16*"/>
+                    <RowDefinition Height="16*"/>
+                    <RowDefinition Height="16*"/>
+                    <RowDefinition Height="16*"/>
+                    <RowDefinition Height="16*"/>
+                </Grid.RowDefinitions>
+
+                <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" BackgroundColor="#000000" VerticalOptions="End" HeightRequest="1"/>
+                <BoxView Grid.Row="0" Grid.Column="0" Grid.RowSpan="6" BackgroundColor="#000000" HorizontalOptions="End" WidthRequest="1"/>
+                
+                <Label Text="Head" FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+                <Label Text="Body" FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="2" Grid.Row="0"/>
+                <Label Text="Arms" FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="3" Grid.Row="0"/>
+                <Label Text="Legs" FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="4" Grid.Row="0"/>
+                
+                <Label Text="Brusies" FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+                <Label Text="Cuts/scrapes" FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="2"/>
+                <Label Text="Sprain/strain" FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="3"/>
+                <Label Text="Dislocation" FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="4"/>
+                <Label Text="Broken bone" FontSize="Medium" TextColor="#000000" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="5"/>
+
+                <Picker x:Name="headBrusies" Grid.Column="1" Grid.Row="1" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="bodyBrusies" Grid.Column="2" Grid.Row="1" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                </Picker.Items>
+                </Picker>
+                <Picker x:Name="armBrusies" Grid.Column="3" Grid.Row="1" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                </Picker.Items>
+                </Picker>
+                <Picker x:Name="legsBrusies" Grid.Column="4" Grid.Row="1" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                </Picker.Items>
+                </Picker>
+
+                <Picker x:Name="headCuts" Grid.Column="1" Grid.Row="2" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="bodyCuts" Grid.Column="2" Grid.Row="2" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="armCuts" Grid.Column="3" Grid.Row="2" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="legCuts" Grid.Column="4" Grid.Row="2" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Picker x:Name="headSprain" Grid.Column="1" Grid.Row="3" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="bodySprain" Grid.Column="2" Grid.Row="3" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="armSprain" Grid.Column="3" Grid.Row="3" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="legSprain" Grid.Column="4" Grid.Row="3" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Picker x:Name="headDislocation" Grid.Column="1" Grid.Row="4" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="bodyDislocation" Grid.Column="2" Grid.Row="4" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="armDislocation" Grid.Column="3" Grid.Row="4" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="legDislocation" Grid.Column="4" Grid.Row="4" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Picker x:Name="headBreak" Grid.Column="1" Grid.Row="5" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="bodyBreak" Grid.Column="2" Grid.Row="5" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="armBreak" Grid.Column="3" Grid.Row="5" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="legBreak" Grid.Column="4" Grid.Row="5" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+            <Button x:Name="btnContinue" Text="Confirm" TextColor="#000000" FontSize="Medium" Margin="50,10,50,20" Clicked="progressToPage3"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MSApp.Pages.SignUpPage">
+    <Grid>
+        <Image Source="bckgrd.jpg" Aspect="AspectFill"/>
+        <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="#ffffff" Opacity="0.7">
+            <Image Source="logo.png" Margin="0,30,0,10"/>
+            <Entry x:Name="emailEntry" Placeholder="E-Mail" TextColor="#000000" HorizontalTextAlignment="Center" Margin="50,20,50,0" PropertyChanged="emailEntered"/>
+            <Entry IsPassword="True"  x:Name="passwordEntry" Placeholder="Password" TextColor="#000000" HorizontalTextAlignment="Center" Margin="50,20,50,0" PropertyChanged="passwordEntered"/>
+            <Entry IsPassword="True" x:Name="passwordConfirmEntry" Placeholder="Confirm Password" TextColor="#000000" HorizontalTextAlignment="Center" Margin="50,20,50,0" PropertyChanged="passwordConfirmEntered"/>
+            <Button x:Name="btnSignUp" Text="Confirm" TextColor="#000000" FontSize="Medium" Margin="50,10,50,20" Clicked="ShowLogIn"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MSApp"
+             x:Class="MSApp.MainPage" Title="Home">
+    <Grid>
+        <Image Source="bckgrd.jpg" Aspect="AspectFill"/>
+        <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="#ffffff" Opacity="0.7">
+            <Image Source="logo.png"/>
+            <Button BackgroundColor="#ffffff" Opacity="0.7" Image="book.png" WidthRequest="50" HeightRequest="100" FontSize="Large" TextColor="#000000" Text="Diary" Clicked="ShowDiaryButton_Clicked"/>
+            <Button BackgroundColor="#ffffff" Opacity="0.7" Image="clock.png" WidthRequest="50" HeightRequest="100" Text="Reminder" FontSize="Large" TextColor="#000000" Clicked="ShowReminderButton_Clicked"/>
+            <Button BackgroundColor="#ffffff" Opacity="0.7" Image ="pen.png" WidthRequest="50" HeightRequest="100" Text="Questionnaire" FontSize="Large" TextColor="#000000" Clicked="ShowQuestionnaireButton_Clicked"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

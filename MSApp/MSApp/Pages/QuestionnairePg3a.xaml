@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MSApp.Pages.QuestionnairePg3a" Title="Question 3a">
+    <Grid>
+        <Image Source="bckgrd.jpg" Aspect="AspectFill"/>
+        <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="#ffffff" Opacity="0.7">
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Margin="5,20,20,10" TextColor="#000000" FontSize="Medium" HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="If you visited a specialist, what type of specialist did you visit?"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Entry TextColor="#000000" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Margin="5,20,20,10" TextColor="#000000" FontSize="Medium" HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="If you were hospitalised, how many days were you in hospital?"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Picker x:Name="daysHospital" BackgroundColor="#ffffff" TextColor="#000000" HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>7</x:String>
+                        <x:String>8</x:String>
+                        <x:String>9</x:String>
+                        <x:String>10</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Margin="5,20,20,10" TextColor="#000000" FontSize="Medium" HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="If you answered &quot;other&quot;, please provide further details"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Editor TextColor="#000000"/>
+            </StackLayout>
+            <Button x:Name="btnContinue" Text="Confirm" TextColor="#000000" FontSize="Medium" Margin="50,10,50,20" Clicked="progressToPage4"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

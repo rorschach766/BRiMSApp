@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MSApp.Pages.ReminderPage" Title="Set Reminder">
+    <Grid>
+        <Image Source="bckgrd.jpg" Aspect="AspectFill"/>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="0,10,0,0">
+            <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="#ffffff" Opacity="0.7" Padding="0,0,0,5">
+                <Label Margin="10,20,10,0" TextColor="#000000" FontSize="Medium" HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Here you can set a daily reminder to fill in your diary."/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Switch x:Name="switch1" HorizontalOptions="Center"/>
+                <Grid Margin="10,20,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="50*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalTextAlignment="Center" TextColor="#000000" FontSize="Medium" HorizontalOptions="End" HorizontalTextAlignment="Center" Grid.Column="0">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Alarm set for: "/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <TimePicker Margin="0,30,0,30" x:Name="TimePicker1" HorizontalOptions="Start" Grid.Column="1"/>
+                </Grid>
+                <Button x:Name="btnConfirmRemind" Text="Set Reminder" TextColor="#000000" FontSize="Medium" Margin="50,10,50,20"/>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>
